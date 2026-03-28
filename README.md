@@ -1,25 +1,36 @@
-# 🍔 Food Order System (Spring Core)
 
 ---
-## 📌 Overview
-Console-based food ordering system demonstrating multi-service architecture using Spring Core.
+
+## ▶️ How to Run
+1. Clone the repository
+2. Open the project in IntelliJ IDEA
+3. Run `FoodappApplication`
 
 ---
-## ✨ Features
-- Add Food
-- View Menu
-- Place Order
-- View Orders
+
+## 📷 Sample Output
+
+### ➕ Add Food
+![Add Food](screenshots/addfood.png)
+
+### 📄 View Menu
+![Menu](screenshots/menu.png)
+
+### 🧾 Place Order
+![Place Order](screenshots/placeorder.png)
+
+### 📦 View Orders
+![Orders](screenshots/orders.png)
 
 ---
-## 🧠 Concepts Used
-- Dependency Injection
-- Multi-service architecture
-- Bean Configuration
-- Layered Design
+
+## 🎯 Key Learning Outcomes
+- Built a multi-service system using Spring Core
+- Understood dependency chaining between services
+- Implemented real-world backend flow for order processing
+- Practiced clean code and modular design
 
 ---
-## 🛠️ Tech Stack
-- Java
-- Spring Core
-- Maven
+
+## 📌 Author
+Bhanu
