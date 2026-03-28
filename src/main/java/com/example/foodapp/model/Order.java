@@ -32,6 +32,14 @@ public class Order {
         this.bill = bill;
     }
 
+    public Food getFood() {
+        return food;
+    }
+
+    public void setFood(Food food) {
+        this.food = food;
+    }
+
     @Override
     public String toString() {
         return "Order{" +

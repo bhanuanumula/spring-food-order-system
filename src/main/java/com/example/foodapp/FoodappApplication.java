@@ -43,9 +43,9 @@ public class FoodappApplication {
 					break;
 				case 2:
 					List<Food> foodItems = foodService.getFoodItems();
-					System.out.printf("%15s%s%n","","----- Menu -----");
+					System.out.printf("%10s%s%n","","----- Menu -----");
 					if(foodItems.isEmpty()){
-						System.out.printf("%16s%s","","Menu is empty\n");
+						System.out.printf("%12s%s","","Menu is empty\n");
 					}else {
 						System.out.printf("%-5s %-20s %10s%n", "Id", "Name", "Price");
 						System.out.println("-".repeat(40));
@@ -69,10 +69,15 @@ public class FoodappApplication {
 					break;
 				case 4:
 					List<Order> orderList = orderService.getOrders();
+					System.out.printf("%10s%s\n","","----- orders -----");
 					if(orderList.isEmpty()){
-						System.out.println("No orders yet");
+						System.out.printf("%13s%s","","No orders yet\n");
 					}else {
-						orderList.forEach(System.out::println);
+						System.out.printf("%-5s %-20s %10s\n","Id","Food","Bill");
+						System.out.println("-".repeat(40));
+						for(Order order : orderList) {
+							System.out.printf("%-5d %-20s %10.2f\n",order.getId(),order.getFood().getName(),order.getBill());
+						}
 					}
 					System.out.println();
 					break;
