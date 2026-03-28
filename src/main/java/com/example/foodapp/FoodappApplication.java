@@ -43,10 +43,15 @@ public class FoodappApplication {
 					break;
 				case 2:
 					List<Food> foodItems = foodService.getFoodItems();
-					if(foodItems.isEmpty()) {
-						System.out.printf("menu is empty");
-					}else{
-							foodItems.forEach(System.out::println);
+					System.out.printf("%15s%s%n","","----- Menu -----");
+					if(foodItems.isEmpty()){
+						System.out.printf("%16s%s","","Menu is empty\n");
+					}else {
+						System.out.printf("%-5s %-20s %10s%n", "Id", "Name", "Price");
+						System.out.println("-".repeat(40));
+						for (Food foodItem : foodItems) {
+							System.out.printf("%-5s %-20s %10.2f%n", foodItem.getId(), foodItem.getName(), foodItem.getPrice());
+						}
 					}
 					System.out.println();
 					break;
